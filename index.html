@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<title>Список дел</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div id="done">Сделано:
+				<p>0</p>
+			</div>
+			<div id="canceled">Отменено:
+				<p>0</p>
+			</div>
+		</header>
+		<main>
+			<p>Добавить новое дело</p>
+			<form>
+				<input type="text" name="title" id="title" placeholder="Название">
+				<input type="text" name="markup" id="markup" placeholder="Пометки">
+			<button>Добавить</button>
+			</form>
+		<main>
+		<div class="cards">
+			<div class="card">
+				<div class="cardTitle">
+					<h2 class="titleCard">Купить хлеб</h2>
+					<h2 class="markupCard">Нарезной</h2>
+				</div>
+				<div class="acceptBtn">✔️</div>
+				<div class="cancelBtn">❌</div>
+			</div>
+		</div>
+	</div>
+	<script src="script/script.js"></script>
+</body>
+</html>
