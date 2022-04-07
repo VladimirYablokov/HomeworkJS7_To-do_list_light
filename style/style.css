@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.container #done {
+.container .done {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@ body {
   background-color: green;
   color: white;
 }
-.container #canceled {
+.container .canceled {
   height: 40px;
   width: 250px;
   display: flex;

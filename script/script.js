@@ -1,3 +1,11 @@
+const resuldDoneElem = document.querySelector('#done')
+let done = localStorage.getItem('valueOfDone') || 0
+resuldDoneElem.innerText = done
+
+const resuldCanceledElem = document.querySelector('#canceled')
+let canceled = localStorage.getItem('valueOfCanceled') || 0
+resuldCanceledElem.innerText = canceled
+
 const formElem = document.querySelector('form');
 const titleElem = document.querySelector('#title');
 const markElem = document.querySelector('#markup');
@@ -27,11 +35,15 @@ formElem.addEventListener('submit', (event) => {
 		titleElem.value = '';
 		markElem.value = '';
 		acceptBtnElem.addEventListener('click', (event)=>{
+			resuldDoneElem.innerText = ++done;
+			localStorage.setItem('valueOfDone', done)
 			card.remove();
 			alert('Вы успешно завершили дело!');
 
 		});
 		cancelBtnElem.addEventListener('click', (event)=>{
+			resuldCanceledElem.innerText = ++canceled;
+			localStorage.setItem('valueOfCanceled', canceled)
 			card.remove()
 			alert('Попробуем в следуйщик раз..');
 		});
